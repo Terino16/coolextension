@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitter Engagement Automator</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="utils.js"></script>
+</head>
+<body>
+  <h1>Twitter Engagement Automator</h1>
+  
+  <div class="container">
+    <div class="section-title">API Configuration</div>
+    <div class="api-key-container">
+      <label for="api-key">Groq API Key:</label>
+      <input type="password" id="api-key" placeholder="Enter your Groq API key">
+    </div>
+    
+    <div class="api-key-container">
+      <label for="api-endpoint">API Endpoint:</label>
+      <input type="text" id="api-endpoint" placeholder="https://api.groq.com/openai/v1/chat/completions">
+      <small class="help-text">Default: https://api.groq.com/openai/v1/chat/completions</small>
+    </div>
+    
+    <div class="api-key-container">
+      <label for="model-select">Groq Model:</label>
+      <select id="model-select">
+        <option value="llama-3.1-70b-versatile">Llama 3.1 70B Versatile</option>
+        <option value="llama-3.1-8b-instant">Llama 3.1 8B Instant</option>
+        <option value="llama3-70b-8192">Llama3 70B</option>
+        <option value="llama3-8b-8192">Llama3 8B</option>
+        <option value="mixtral-8x7b-32768">Mixtral 8x7B</option>
+        <option value="llama-3.3-70b-versatile">Llama 3.3 70B Versatile</option>
+        <option value="gemma2-9b-it">Gemma2 9B IT</option>
+      </select>
+    </div>
+    
+    <div class="section-title">Automation Settings</div>
+    <div class="toggle-container">
+      <span>Automation Status:</span>
+      <label class="toggle">
+        <input type="checkbox" id="automation-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container">
+      <span>Like Tweets:</span>
+      <label class="toggle">
+        <input type="checkbox" id="like-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container">
+      <span>Comment on Tweets:</span>
+      <label class="toggle">
+        <input type="checkbox" id="comment-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container">
+      <span>Follow Users:</span>
+      <label class="toggle">
+        <input type="checkbox" id="follow-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="section-title">Advanced Settings</div>
+    <div class="toggle-container">
+      <span>Debug Mode:</span>
+      <label class="toggle">
+        <input type="checkbox" id="debug-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <button class="save-btn" id="save-settings">Save Settings</button>
+    
+    <div class="status" id="status-message">
+      Extension is currently inactive. Toggle to activate.
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>Twitter Engagement Automator v1.0</p>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
